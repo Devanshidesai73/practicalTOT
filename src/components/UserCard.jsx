@@ -9,7 +9,7 @@ const UserCard = ({item, index}) => {
   const dispatch = useDispatch();
 
   const favourites = useSelector(state => state.loginData.favourites);
-  console.log(favourites);
+  // console.log(favourites);
 
   const [isFavourite, setIsFavourite] = useState(favourites.includes(item));
 

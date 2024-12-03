@@ -7,7 +7,11 @@ import UserCard from '../components/UserCard';
 
 const Favourite = () => {
   const favouritesList = useSelector(state => state.loginData.favourites);
-  const [favourites, setFavourites] = useState(favouritesList);
+  const filteredItems =
+    favouritesList.filter(item => item !== null && item.gender !== undefined) ??
+    [];
+  const [favourites, setFavourites] = useState(filteredItems);
+
   console.log(favourites);
 
   return (
