@@ -63,6 +63,7 @@ const Home = () => {
         isLoading: true,
       });
       setUsers({...users, loading: true});
+      getData();
     }
   }, [pagination]);
 
